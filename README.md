@@ -1,23 +1,41 @@
 Jake and Shilpa decided to write a program to rewrite The Good Place finale, because it was awful and they think their program can do a better job.
 
 PSEUDOCODE:
+
 score words from 1-10 based on following categories: (NOTE: mark -1 if not applicable)
+
   joy (0 - 10), 0 = sad, 10 = happy
+  
   conflict creation (0 - 10)
+  
   conflict resolution (0 - 10)
+  
   realization (0 - 10)
+  
   guilt (0 - 10)
+  
   anger (0 - 10)
+  
   sarcasm (0 - 10)
+  
   confusion (0 - 10)
+  
 score sentences by averaging scores of each word
+
 make sentences together based on 'sentence recipes': grab 
+
   assign integer values to certain recipes. 
+  
   [sad happy sad]
+  
   leads into [happy elated content]
+  
   ends with [confused] = int 1
+  
   starts with [certain/problem solved (i.e 'AHA!' or 'i’m sure!')] = int 2
+  
   the difference between them is 1, so the algorithm is more likely to place them together. we want to string together sentences that have the least difference.
+  
   difference(string1, string2)
 
 
