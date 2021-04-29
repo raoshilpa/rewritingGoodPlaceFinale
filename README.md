@@ -8,4 +8,3 @@ I think it'd be cool if we took screencaps from each episode, maybe once per 10 
 
 We can use the images as an extra parameter to determine our new script's sentence structure (i.e determining the sentence recipes).
 
-In addition to using the "emotions of images" to create the script's new sentences, we can also come up with some cool randomized algorithm to do whatever. maybe like every 3rd+x sentence is a pensive sentence, every e^yth sentence is an angry one, etc.
