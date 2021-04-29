@@ -11,7 +11,6 @@ private:
   std::string mSentence;
   int mJoyScore;
   int mAngerScore;
-  int mQuestionScore;
   int mConfusionScore;
   int mMiscellaneousScore;
 };

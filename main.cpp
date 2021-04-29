@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
 void splitUpSentences(string str);
@@ -10,15 +11,46 @@ int main() {
 
   cleanString(str);
 
-  cout << str << endl;
+  // cout << str << endl;
 
+
+
+  // vector<string> words;
+  
+  splitUpSentences(str);
 
 }
 
-void splitUpSentences(string str) {
+void splitUpSentences(string& str) {
 
+  vector<string> vect;
   for (int i = 0; str[i] != '\n'; i++) {
-    
+
+    // Conversation:
+    if (str[i] == '-') {
+      int sizeToDelete = 1;
+      string newString = "";
+      while(str[i + sizeToDelete] != '-' && i < str.size()) {
+        sizeToDelete++;
+        newString += str[sizeToDelete];
+      }
+      // add it into array, then delete it
+      vect.push_back(newString);
+      cout << newString << endl;
+      str.erase(i, sizeToDelete + 1);
+    } else if (str[i] == '.') {
+      int sizeToDelete2 = 1;
+      string newString2 = "";
+      while(str[i + sizeToDelete2] != '.' && i < str.size()) {
+        sizeToDelete2++;
+        newString2 += str[sizeToDelete2];
+      }
+      // add it into array, then delete it
+      vect.push_back(newString2);
+      cout << newString2 << endl;
+      str.erase(i, sizeToDelete2 + 1);
+    }
+
   }
 
 }
