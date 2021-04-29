@@ -3,9 +3,15 @@
 class Sentence
 {
 public:
-  Sentence(string sentence, int joyScore = -1, int angerScore, questionScore);
-  string getSentence();
-
-
-
-}
+  Sentence(std::string sentence, int joyScore, 
+           int angerScore, int confusionScore, int miscellaneousScore);
+  std::string getSentence();
+  std::string* getWordArray();
+private:
+  std::string mSentence;
+  int mJoyScore;
+  int mAngerScore;
+  int mQuestionScore;
+  int mConfusionScore;
+  int mMiscellaneousScore;
+};
